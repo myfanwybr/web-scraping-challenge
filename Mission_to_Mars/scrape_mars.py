@@ -63,11 +63,11 @@ def scrape_info():
         title=item.find('h3').get_text()
         browser.click_link_by_partial_text(title)
         browser.click_link_by_text("Sample")
-        img=browser.url 
+        img_url=browser.url 
     
         
         dict_s["title"] = title
-        dict_s["img_url"]=img
+        dict_s["img_url"]=img_url
                 
         hemisphere_img_urls.append(dict_s)
 
