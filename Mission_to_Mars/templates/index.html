@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Weather Analysis/Home</title>
-  <!--Bring in bootstrap stylesheet-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+        <p>  
+          <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a>
+        </p>
+    </div>
+    <div class="container">
+      <h3> Latest Mars News</h3>
+        <h4>{{space_data.news_title}}</h4>
+        <p> {{space_data.news_p}}
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h3> Featured Mars Image </h3>
+          <img src="{{space_data.featured_img_url}}">
+        </div>
+        <div class="col">
+          <h5>Mars Facts</h5>
+          {{space_data.mars_html_table}}
+        </div>
+      </div>
+      <div class="row">
+        <h3>Mars Hemispheres</h3>
+        <div class="col">
+          {{space_data.hemisphere_img_urls["title"]}}
+        </div>
+        <div class="col">col</div>
+        <div class="w-100"></div>
+        <div class="col">col</div>
+        <div class="col">col</div>
+      </div>
+    </div>
+    
+  </div>
+
+
+</body>
+
+</html>
