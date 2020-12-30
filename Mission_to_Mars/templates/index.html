@@ -39,7 +39,7 @@
         </div>
         <div class="col">
           <h5>Mars Facts</h5>
-            <div> {{space_data.mars_html_table |safe}} </div>
+            <div class="table table-striped"> {{space_data.mars_html_table |safe}} </div>
         </div>
       </div>
     </div>
@@ -48,6 +48,7 @@
       <h3>Mars Hemispheres</h3>
         <div class="card-deck">
           <div class="row">
+            <div class="card">
             {% for data in space_data.hemisphere_img_urls%}
               <div class="col-md-6">
                   <div class="card">
@@ -57,7 +58,8 @@
                   </div>
                   </div>
               </div>
-            {% endfor %} 
+            {% endfor %}
+          </div> 
           </div> 
       </div>
     </div>
