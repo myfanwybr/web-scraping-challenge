@@ -12,17 +12,21 @@
 
 <body>
   <div class="container-fluid">
+    <!--jumbotron-->
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
         <p>  
           <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a>
         </p>
     </div>
+
+    <!--mars news-->
     <div class="container">
       <h3> Latest Mars News</h3>
         <h4>{{space_data.news_title}}</h4>
         <p> {{space_data.news_p}}
     </div>
+
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -34,25 +38,26 @@
             <table class="table"> {{space_data.mars_html_table}} </table>
         </div>
       </div>
-      <div class="container">
-        <h3>Mars Hemispheres</h3>
-        
-          <div>
-            {% for data in space_data.hemisphere_img_urls%}
-              <div class="row">
-                <div class="col">{{data.img_url}}</div>
-                <div class="col">{{data.title}}</div>
-              </div>
-            {% endfor %}  
-      
-
-          </div>
-      </div>
     </div>
     
+    <div class="container-fluid">
+      <h3>Mars Hemispheres</h3>
+        <div class="card-deck">
+          {% for data in space_data.hemisphere_img_urls%}
+
+            <div class="card">
+              <img class="card-img-top" src="{{data.img_url}}" alt="Hemisphere Image">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.title}}</h5>
+                </div>
+            </div>
+          {% endfor %}  
+        </div>
+    </div>
   </div>
 
 
 </body>
 
 </html>
+
