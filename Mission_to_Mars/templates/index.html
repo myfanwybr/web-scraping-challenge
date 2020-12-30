@@ -31,18 +31,22 @@
         </div>
         <div class="col">
           <h5>Mars Facts</h5>
-          {{space_data.mars_html_table}}
+            <table class="table"> {{space_data.mars_html_table}} </table>
         </div>
       </div>
-      <div class="row">
+      <div class="container">
         <h3>Mars Hemispheres</h3>
-        <div class="col">
-          {{space_data.hemisphere_img_urls["title"]}}
-        </div>
-        <div class="col">col</div>
-        <div class="w-100"></div>
-        <div class="col">col</div>
-        <div class="col">col</div>
+        
+          <div>
+            {% for data in space_data.hemisphere_img_urls%}
+              <div class="row">
+                <div class="col">{{data.img_url}}</div>
+                <div class="col">{{data.title}}</div>
+              </div>
+            {% endfor %}  
+      
+
+          </div>
       </div>
     </div>
     
