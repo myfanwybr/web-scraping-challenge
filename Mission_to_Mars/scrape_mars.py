@@ -62,8 +62,9 @@ def scrape_info():
         browser.visit(hemisphere_url) 
         title=item.find('h3').get_text()
         browser.click_link_by_partial_text(title)
-        browser.click_link_by_text("Sample")
-        img_url=browser.url 
+        html = browser.html
+        soup = bs(html, 'html.parser')
+        img_url=soup.find("img", class_="wide-image")["src"]
     
         
         dict_s["title"] = title
