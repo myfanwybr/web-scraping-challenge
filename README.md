@@ -7,4 +7,4 @@ I scraped the data from four websites:
 
 And the final application displays the data:
 
-<img src>
+<img src="scrape.png">
