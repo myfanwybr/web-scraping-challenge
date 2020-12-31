@@ -26,18 +26,22 @@
 
     <!--mars news-->
     <div class="container">
-      <h1> Latest Mars News</h1>
-        <h3>{{space_data.news_title}}</h3>
-        <p class="h5"> {{space_data.news_p}}
+      <div class="row">
+        <div class="col-12">
+          <h1> Latest Mars News</h1>
+            <h3>{{space_data.news_title}}</h3>
+              <p class="h5"> {{space_data.news_p}}
+        </div>
+      </div>
     </div>
 
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-8 m-3 p-3">
           <h1> Featured Mars Image </h1>
-          <img class="col-12" src="{{space_data.featured_img_url}}">
+            <img class="col-12 ml-1" src="{{space_data.featured_img_url}}">
         </div>
-        <div class="col">
+        <div class="col p-4 m-4">
           <h3>Mars Facts</h3>
             <div class="table table-striped"> {{space_data.mars_html_table |safe}} </div>
         </div>
@@ -46,11 +50,11 @@
     
     <br>
     <div class="container">
-    <div class="row p-3">
+    <div class="row p-3 m-3">
       <h1 class="p-3">Mars Hemispheres</h1>
         <div class="card-deck">
           <div row>
-            <div class=col-md-8>
+            <div class=col-md-10>
             {% for data in space_data.hemisphere_img_urls%}
               <div class="col-md-6">
                   <div class="card">
